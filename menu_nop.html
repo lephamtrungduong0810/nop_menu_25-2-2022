@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: rgb(228, 241, 241);
+    }
+    #header{
+        height: 50px;
+        background: rgb(94, 91, 91);
+    }
+    .container{
+        max-width: 960px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+    }
+
+    #main-menu{
+        display: flex;
+        list-style-type: none;
+    }
+    #main-menu li{
+    position: relative;
+    }
+    #main-menu li a:hover{
+        background-color: rgb(181, 216, 247);
+    }
+    #main-menu li a{
+        padding: 15px 20px;
+        text-decoration: none;
+        color: rgb(22, 129, 223);
+        display: block;
+    }
+    #main-menu ul.sub_menu{
+        left: 0px;
+        position: absolute;
+        background-color:   rgb(94, 91, 91);
+        list-style-type: none;
+        color: azure;
+        width: 150px;
+        display: none;
+    }
+    #main-menu li:hover > ul.sub_menu {
+        display: block;
+    }
+    #main-menu ul.sub_menu  a{
+        padding: 8px 15px;
+        border: 1px solid rgb(54, 52, 52);
+    
+    }
+    #main-menu ul.sub_menu ul.sub_menu{
+        left: 150px;
+        top: 0px;
+    }
+        #main-menu ul.sub_menu ul.sub_menu a{
+        color: red;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <nav class="container">
+                <ul id="main-menu">
+                    <li><a href="">Menu 1</a></li>
+                    <li><a href="">Menu 2</a>
+                        <ul class="sub_menu">
+                            <li><a href="">menu 2.1</a></li>
+                            <li><a href="">menu 2.2</a></li>
+                            <li><a href="">menu 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Menu 3</a></li>
+                    <li><a href="">Menu 4</a></li>
+                    <li><a href="">Menu 5</a></li>
+                    
+                    
+                </ul>
+            </nav>
+            
+        </div>
+    </div>
+</body>
+</html>
